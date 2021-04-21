@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/hello")
-    public String sayHello(@RequestParam("name")String name){
-        return "Hello "+name+" from Spring Boot!!";
+    public String sayHello(@RequestParam(name="name", required=false)String name){
+        return "Hello "+name+" to Spring Boot updated. ";
     }
 }
